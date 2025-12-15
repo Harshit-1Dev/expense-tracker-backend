@@ -1,4 +1,10 @@
 const { Sequelize } = require("sequelize");
+// console.log(
+//   "DB CONFIG →",
+//   process.env.DB_USER,
+//   process.env.DB_HOST,
+//   process.env.DB_NAME
+// );
 
 const sequelize = new Sequelize(
   process.env.DB_NAME,
