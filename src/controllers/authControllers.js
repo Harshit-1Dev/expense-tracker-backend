@@ -22,7 +22,12 @@ const register = async (req, res) => {
       userId: user.id,
     });
   } catch (error) {
-    res.status(500).json({ message: "Registration failed" });
+    // res.status(500).json({ message: "Registration failed" });
+     console.error("REGISTER ERROR:", error);
+  res.status(500).json({
+    message: "Registration failed",
+    error: error.message
+  });
   }
 };
 
